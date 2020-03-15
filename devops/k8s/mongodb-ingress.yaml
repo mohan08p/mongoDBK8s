@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-mongo
+spec:
+  rules:
+  - host: mongo.myapp.com
+    http:
+      paths:
+      - backend:
+          serviceName: mongosvc
+          servicePort: 27017
